@@ -1,0 +1,24 @@
+html{
+    height:100%;
+    background:  #d6dbdf ;
+    background: -webkit-linear-gradient(to top, #5d6d7e  , #d6dbdf);
+    background: linear-gradient(to top,#5d6d7e , #d6dbdf);
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.contenedor{
+
+}
+.izquierdo{
+    width: 48%;
+    float: left;
+
+}
+.derecho{
+
+    width: 48%;   
+    float: right;
+
+}

@@ -37,11 +37,12 @@ public class Mundo extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Mundo</title>");            
+            out.println("<title>Servlet Mundo</title>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styleCabeceras.css\">");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1> Hola Mundo desde servlet</h1>");
-            out.println("<h1>El metodo utilizado es "+ request.getMethod() +" </h1>");
+            out.println("<h2>El metodo utilizado es " + request.getMethod() + " </h2>");
             out.println("<a href='index.html'>Indice</a>");
             out.println("</body>");
             out.println("</html>");

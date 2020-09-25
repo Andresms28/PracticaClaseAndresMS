@@ -37,7 +37,8 @@ public class Context extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Context</title>");            
+            out.println("<title>Servlet Context</title>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styleCabeceras.css\">");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Context at " + request.getContextPath() + "</h1>");

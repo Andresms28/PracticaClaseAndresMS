@@ -40,15 +40,12 @@ public class Cabeceras extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet Cabeceras</title>");
-            out.println("<link rel=\"stylesheet\" href=\"style.css\">");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styleCabeceras.css\">");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Cabeceras a mostrar: </h1>");
-            out.println("<a href='index.html'>Indice</a>");
-            out.println("</body>");
-            out.println("</html>");
-
-            Enumeration cabeceras = request.getHeaderNames();
+            out.println("<div>");
+             Enumeration cabeceras = request.getHeaderNames();
 
             while (cabeceras.hasMoreElements()) {
                 String nombre = (String) (cabeceras.nextElement());
@@ -57,8 +54,13 @@ public class Cabeceras extends HttpServlet {
 
             }
             out.println("</div>");
+            out.println("<a href='index.html'>Indice</a>");
             out.println("</body>");
             out.println("</html>");
+
+           
+            
+            
         }
 
     }

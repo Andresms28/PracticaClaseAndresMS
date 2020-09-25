@@ -1,0 +1,13 @@
+html{
+    height:100%;    
+    background: -webkit-linear-gradient(to top, #5d6d7e  , #d6dbdf);
+    background: linear-gradient(to top,#5d6d7e , #d6dbdf);
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+div{
+    border: outset grey 5px ;    
+    padding-left: 10px;
+}
