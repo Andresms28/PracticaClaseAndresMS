@@ -7,6 +7,7 @@ package es.albarregas.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+
 import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,19 +40,23 @@ public class Cabeceras extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet Cabeceras</title>");
-            out.println("<link rel='stylesheet' href='style.css'>");
+            out.println("<link rel=\"stylesheet\" href=\"style.css\">");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Cabeceras</h1>");
-            out.println("<br>");
+            out.println("<h1>Cabeceras a mostrar: </h1>");
+            out.println("<a href='index.html'>Indice</a>");
+            out.println("</body>");
+            out.println("</html>");
 
             Enumeration cabeceras = request.getHeaderNames();
 
             while (cabeceras.hasMoreElements()) {
                 String nombre = (String) (cabeceras.nextElement());
-                out.println("<p>" + nombre+ ", Valor: " + request.getHeader(nombre)+"</p>");
-                out.println("<BR><BR>");
+
+                out.println("<p>" + nombre + " : " + request.getHeader(nombre) + "</p>");
+
             }
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }
