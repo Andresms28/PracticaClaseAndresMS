@@ -7,7 +7,6 @@ package es.albarregas.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Emilio
  */
-@WebServlet(name = "Cabeceras", urlPatterns = {"/Cabeceras"})
-public class Cabeceras extends HttpServlet {
+@WebServlet(name = "FormularioSimple", urlPatterns = {"/FormularioSimple"})
+public class FormularioSimple extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,35 +33,53 @@ public class Cabeceras extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Cabeceras</title>");
-            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"Css/styleCabeceras.css\">");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Cabeceras a mostrar: </h1>");
-            out.println("<div>");
-             Enumeration cabeceras = request.getHeaderNames();
+        PrintWriter out = response.getWriter();
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<meta charset=\"UTF-8\">");
+        out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"Css/styleFormSimpleServlet.css\">");
+        out.println("<title>Servlet Fomulario Simple</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>Datos introducidos en el formulario</h1>");
+        out.println("<div id='contenido'>");
+        out.println("<div class='elementos'>");
 
-            while (cabeceras.hasMoreElements()) {
-                String nombre = (String) (cabeceras.nextElement());
+        Enumeration<String> parametros = request.getParameterNames();
 
-                out.println("<p>" + nombre + " : " + request.getHeader(nombre) + "</p>");
+        while (parametros.hasMoreElements()) {
+            String nombre = parametros.nextElement();
+            if (!nombre.startsWith("env")) {
+                if (nombre.equals("Aficiones")) {
+                    String[] items = request.getParameterValues("Aficiones");
+                    out.print("<strong>" + nombre + ": </strong>");
+
+                    for (int i = 0; i < items.length; i++) {
+                        if (items[i].equals("MÃºsica")) {
+                            out.println("Música ");
+                        } else {
+                            if (items[i].equals("InformÃ¡tica")) {
+                                out.println("Informática ");
+                            } else {
+                                out.print(items[i] + " ");
+                            }
+                        }
+
+                    }
+                    out.print("<br/>");
+                } else {
+                    out.println("<strong>" + nombre + ": </strong>" + request.getParameter(nombre) + "<br/>");
+                }
 
             }
-            out.println("</div>");
-            out.println("<a href='index.html'>Indice</a>");
-            out.println("</body>");
-            out.println("</html>");
-
-           
-            
-            
         }
 
+        out.println("</div>");
+        out.println("</div>");
+        out.print("<p ><a href='" + request.getContextPath() + "'>Men&uacute; inicial</a></p>");
+        out.println("</body>");
+        out.println("</html>");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -78,10 +95,6 @@ public class Cabeceras extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        PrintWriter out = response.getWriter();
-
-        // Mostramos las cabeceras enviadas 
-        // en la peticion
     }
 
     /**
@@ -106,6 +119,5 @@ public class Cabeceras extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
-
+    }
 }

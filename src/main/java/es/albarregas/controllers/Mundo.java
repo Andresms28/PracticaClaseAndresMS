@@ -38,7 +38,7 @@ public class Mundo extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet Mundo</title>");
-            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"styleCabeceras.css\">");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"Css/styleCabeceras.css\">");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1> Hola Mundo desde servlet</h1>");
