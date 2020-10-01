@@ -17,5 +17,9 @@ div{
 .submit{
     text-align: center
 }
+.validar{
+    border: outset grey 5px ;    
+    padding: 10px; 
+}
 
 

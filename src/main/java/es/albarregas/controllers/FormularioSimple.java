@@ -77,7 +77,7 @@ public class FormularioSimple extends HttpServlet {
 
         out.println("</div>");
         out.println("</div>");
-        out.print("<p ><a href='" + request.getContextPath() + "'>Men&uacute; inicial</a></p>");
+        out.print("<p class='indice'><a href='" + request.getContextPath() + "'>Men&uacute; inicial</a></p>");
         out.println("</body>");
         out.println("</html>");
     }

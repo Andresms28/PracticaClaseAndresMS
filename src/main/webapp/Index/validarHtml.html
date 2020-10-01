@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Index Formulario Simple</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../Css/styleFormSimple.css">
+    </head>
+    <body>
+        <h1>Fomulario Simple</h1>
+        <form method="post" action="../ValidarServlet" >
+            <div>
+                <fieldset>
+                    <legend>Datos Usuario</legend>
+                    <p>Usuario: <input type="text" name="Usuario" ></p>
+                    <p>Contraseña : <input type="password" name="Contrasena" ></p>
+                    <p>Sexo:
+                        <input type="radio" name="Sexo" value="Hombre" checked="checked"> Hombre
+                        <input type="radio" name="Sexo" value="Mujer"> Mujer
+                    </p>
+                    <p>Edad : <input type="number" name="Edad" value="18" ></p>
+
+
+                </fieldset>
+                <fieldset>
+                    <legend>Datos complementarios:</legend>
+                    <p>Estado civil
+                        <input type="radio" name="Estado Civil" value="Soltero" checked="checked"> Soltero
+                        <input type="radio" name="Estado Civil" value="Casado"> Casado
+                        <input type="radio" name="Estado Civil" value="Viudo"> Viudo
+                        <input type="radio" name="Estado Civil" value="Divorciado"> Divorciado
+                    </p>
+                    <p>Aficion/es (press Ctrl seleccionar varios:</p>
+                    <select name="Aficiones" multiple="multiple" size="6">
+                        <option selected="selected">Deporte </option>
+                        <option>Música</option>
+                        <option>Viajes</option>
+                        <option>Informática</option>
+                        <option>Tiendas</option>
+                        <option>Juegos</option>
+                    </select>
+                    <p>Si deseas mandar simplemente una opinion o comentario escribelo aquí.<br>
+                        <textarea name="comentario" rows="2" cols="50" placeholder="Escriba aqui..." > </textarea>
+                    </p>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Medios Tecnologicos:</legend>
+                    <p>Conexion a internet:
+                        <input type="radio" name="Conexion a internet" value="Si" checked="checked"> Si
+                        <input type="radio" name="Conexion a internet" value="No"> No                        
+                    </p>
+                    
+                    <p>Sistema operativo:</p>
+                    <select name="Sistema Operativo"  size="4">
+                        <option selected="selected">Linux </option>
+                        <option>Windows</option>
+                        <option>Macintosh</option>
+                        <option>Solaris </option>                        
+                    </select>               
+
+                </fieldset>
+
+            </div>
+            <p class="submit">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </p>
+        </form>
+
+    </body>
+</html>
