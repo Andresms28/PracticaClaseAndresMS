@@ -143,7 +143,7 @@ public class SegundoValidar extends HttpServlet {
     public void pintarHtml(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String fallo = "";
         response.setContentType("text/html;charset=UTF-8");
-        System.out.println(vnom);
+        
         if (vnom.equals("")) {
             fallo += " <li> Nombre no es correcto </li> ";
         }
