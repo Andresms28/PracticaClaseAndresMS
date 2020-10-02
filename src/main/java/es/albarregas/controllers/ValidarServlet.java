@@ -165,7 +165,7 @@ public class ValidarServlet extends HttpServlet {
                     + "    <body>\n"
                     + "        <h1>Fomulario Simple</h1>\n"
                     + "        <form method=\"post\" action=\"ValidarServlet\" >\n"
-                    + "            <div id='validar'>\n"
+                    + "            <div class='validar'>\n"
                     + "            <h1>Error en los campos requeridos</h1>\n"
                     + "            <ul>\n"
                     + "            " + fallo + "\n"                    

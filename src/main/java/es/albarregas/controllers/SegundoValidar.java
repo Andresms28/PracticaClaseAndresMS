@@ -170,7 +170,7 @@ public class SegundoValidar extends HttpServlet {
                     + "    <body>\n"
                     + "        <h1>Segundo Validar</h1>\n"
                     + "        <form method=\"post\" action=\"SegundoValidar\" >\n"
-                    + "            <div id='validar'>\n"
+                    + "            <div class='validar'>\n"
                     + "            <h1>Error en los campos requeridos</h1>\n"
                     + "            <ul>\n"
                     + "            " + fallo + "\n"
