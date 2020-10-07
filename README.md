@@ -26,5 +26,8 @@ Este proyecto reunira todos los ejercicios propuestos.
 
 ### Servlet Segunda Validacion
 
-* Nos mostrara el mismo formulario con la validacion en servlet, exceptuando que antes de poder mostrar el formukario con los errores, nos mostrara una advertencia de error y despues de esto ya si aparecera el formulario,mostrando los errores, para completar aquellos campos que tengamos mal.Después, si el formulario esta correctamente completado, nos mostrara los datos seleccionados
+* Nos mostrara el mismo formulario con la validacion en servlet, exceptuando que antes de poder mostrar el formulario con los errores, nos mostrara una advertencia de error y despues de esto ya si aparecera el formulario,mostrando los errores, para completar aquellos campos que tengamos mal.Después, si el formulario esta correctamente completado, nos mostrara los datos seleccionados
+## Jsp 🔧
+### Jsp Contexto
 
+* Nos mostrara el context del jsp.
