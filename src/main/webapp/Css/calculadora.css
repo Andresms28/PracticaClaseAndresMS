@@ -1,0 +1,24 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+    
+}
+table{
+    border: #add8e6 solid 5px;
+    background: #f5deb3;
+}
+tr,td{
+   border: solid #d2b48c 3px; 
+}
+.radio{
+    text-align: right;
+    
+}
+.error{
+   
+    color: red;
+    font-style: italic;
+}
+
