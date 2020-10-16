@@ -1,0 +1,18 @@
+#container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.div1{
+    border: solid lightblue 3px;
+    background: lightgoldenrodyellow;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px;
+}
+h2,h3{
+    text-align: center;
+}

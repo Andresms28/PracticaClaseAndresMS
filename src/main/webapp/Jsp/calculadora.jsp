@@ -112,7 +112,7 @@
                     <tr></tr>
                     <tr>
                         <td colspan="2"><input type="submit" value="Calcular" /><input type="reset" value="Limpiar"><input
-                                type="button" onclick="" value="Menú" /></td>
+                                type="button" onclick="location.href='<%= request.getContextPath() %>';" value="Menú" /></td>
 
                     </tr>
                 </table>
