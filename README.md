@@ -31,3 +31,19 @@ Este proyecto reunira todos los ejercicios propuestos.
 ### Jsp Contexto
 
 * Nos mostrara el context del jsp.
+### Jsp Saludo
+
+* Nos mostrara un cordial saludo con el nombre que hayamos introducido.
+### Jsp Edad
+
+* Nos dira que edad tenemos con los valores introducidos previamente.
+### Jsp Calculadora
+
+* Podremos utilizar la calculadora y sacara sus respectivos mensajes de error.
+### Jsp Contador
+
+* Nos mostrara las veces que hemos accedido a esa pagina, en este caso el jsp.
+
+
+
+
